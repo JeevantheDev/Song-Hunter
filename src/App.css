@@ -135,6 +135,13 @@
     justify-content: center;
     margin: 3rem auto;
     width: 18rem;
+    overflow: hidden;
+}
+.song .card:hover {
+    cursor: pointer;
+    transform: scale(1.18);
+    transition: transform 0.45s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    overflow: hidden;
 }
 .song .card:nth-child(odd) {
     animation-name: moveInLeft;
@@ -149,6 +156,7 @@
 .song .card .card-img-top {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  overflow: hidden;
 }
 
 .song .card .card-body {

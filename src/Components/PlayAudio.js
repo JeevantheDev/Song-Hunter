@@ -3,7 +3,8 @@ import '../App.css';
 
 function PlayAudio(props) {
     const audioTune = new Audio(props.audio);
-
+    console.log(audioTune);
+    
 
     useEffect(() => {
         audioTune.load();
