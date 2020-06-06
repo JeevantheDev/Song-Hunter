@@ -133,7 +133,7 @@
  .song .card {
     border-radius: 15px;
     justify-content: center;
-    margin: 3rem auto;
+    margin: 3rem 1.5rem;
     width: 18rem;
     overflow: hidden;
 }
@@ -270,6 +270,9 @@ footer .container p {
     .song {
         flex-direction: column;
         height: auto;
+    }
+    .song .card {
+        margin: 3rem auto;
     }
 }
 
