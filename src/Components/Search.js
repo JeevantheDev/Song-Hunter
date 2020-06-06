@@ -28,7 +28,7 @@ const Search = () => {
                     />
                     {
                         searchValue.length === 0 ? <Alert/> : 
-                        <Link className="btn btn-warning" to={`/search/${searchValue}`}>
+                        <Link className="btn btn-warning" type="submit" to={`/search/${searchValue}`}>
                             <i className="fas fa-search faa-flash animated"></i>
                         </Link>
                     }
