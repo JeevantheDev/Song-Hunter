@@ -1,38 +1,287 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Piedra&family=Roboto+Slab&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Alert */
+.alert {
+  background-color: #f8b24f;
+  color: #3f3f44;
+  margin: 1rem;
+}
+.special-div {
+    display: flex;
+}
+.special-div input:last-child {
+    margin: 0 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar */
+#nav {
+    font-family: 'Roboto Slab', serif;
+    justify-content: space-between;
+    background: #3f3f44;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+#nav a:last-child:hover {
+    transition: 0.5s;
+    color: #f8b24f;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nav a:first-child {
+    font-family: 'Piedra', cursive;
+    font-size: 1.50rem;
+    color: #e8e4e1;
+}
+#nav a:first-child span {
+    font-family: 'Lobster', cursive;
+    color: #f8b24f;
+}
+/* Home */
+#container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 3rem 5rem;
+    margin: 10rem 10rem;
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('./img/background.jpg')no-repeat center center/cover;
+    height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#home .jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 70vh;
+    font-family: 'Roboto Slab', serif;
+    background: #3f3f44;
+    color: #e8e4e1;
+    margin: auto 5rem;
+    opacity: 0.95;
+    animation: moveInRight 2s ease-out; 
+}
+#home .jumbotron .display-4 {
+    font-size: 4.5rem;
+    font-family: 'Lobster', cursive;
+    color: #f8b24f;
+}
+#home .jumbotron .display-4 span {
+    color: #e8e4e1;
+}
+#home .jumbotron .my-4 {
+    border-top: 2px solid #f4f4f4;
+}
+#home .jumbotron .form-inline {
+    justify-content: center;
+    animation-name: moveInDown;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+#home .jumbotron .form-inline input {
+    background-color: #e8e4e1;
+    color: #3f3f44;
+    width: 80%;
+}
+#home .jumbotron .form-inline .btn {
+    animation: moveInUp 2s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 22vh;
+    background: #f8b24f;
+}
+.header h1 span {
+    text-shadow: #3f3f44 1px 0 10px;
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+    color: #3f3f44;
+    font-size: 4.5rem;
+}
+.header h1 i{
+  color: #e8e4e1;
+  font-size: 4.5rem;
+}
+.header img {
+    width: 10%;
+    box-shadow: #3f3f44 1px 0 10px;
+    border: 3px solid #e8e4e1;
+    border-radius: 50%;
+    animation: moveInRight 2s ease-out; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Songs */
+ .song {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #c7c2c2;
+    height: auto;
+    overflow: hidden;
+}
+ .song .card {
+    border-radius: 15px;
+    justify-content: center;
+    margin: 3rem auto;
+    width: 18rem;
+}
+.song .card:nth-child(odd) {
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+.song .card:nth-child(even) {
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+.song .card .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.song .card .card-body {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: 'Roboto Slab', serif;
+    background-color: #3f3f44;
+    color: #c7c2c2;
+}
+.song .card .card-body .card-title {
+    font-family: 'Lobster', cursive;
+    font-size: 1.7rem;
+    color: #f8b24f;
+    border-bottom: 1px dotted #e8e4e1;
+}
+
+/* Main footer */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 2rem;
+    overflow: hidden;
+}
+footer .container p {
+    font-size: 1rem;
+    margin: 5px auto;
+}
+.bg-dark {
+    font-family: 'Roboto Slab', serif;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes moveInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px); }
+    80% {
+      transform: translateY(10px); }
+    100% {
+      opacity: 0.95;
+      transform: translate(0); } }
+@keyframes moveInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px); }
+    80% {
+      transform: translateY(10px); }
+    100% {
+      opacity: 0.95;
+      transform: translate(0); } }
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px); }
+    80% {
+      transform: translateX(10px); }
+    100% {
+      opacity: 0.95;
+      transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 0.95;
+    transform: translate(0); } }
+
+/* Tablet */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1)  {
+    .header {
+        height: 20vh;
+    }
+    .header img {
+        width: 20%;
+    }
+    .song {
+        height: auto;
+    }
+}
+
+/* Smart Phones */
+@media (max-width: 575.98px){
+    #home .jumbotron {
+        height: auto;
+    }
+    #home .jumbotron .display-4 {
+        font-size: 1.7rem;
+    }
+    #home .jumbotron .form-inline {
+        flex-direction: column;
+    }
+    #home .jumbotron .form-inline input {
+        font-size: 0.rem;
+        margin-bottom: 0.5rem;
+    }
+    .header {
+        flex-direction: column;
+        height: 50vh;
+    }
+    .header img {
+        width: 25%;
+    }
+    .song {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+/* Smart phone landscape */
+@media(max-height: 500px) {
+    #home {
+        width: auto;
+        height: 50%;
+    }
+    #home .jumbotron {
+        width: auto;
+        height: 20%;
+    }
+    #home .jumbotron .display-4 {
+        font-size: 3rem;
+    }
+    #home .jumbotron .lead {
+        font-size: 1rem;
+    }
+    .header {
+        height: auto;
+    }
 }
