@@ -43,11 +43,9 @@ function Songs({match}) {
               <i className="fas fa-chevron-left" /> Go Back
             </Link>
             <h1 className="item">
-              <i className="fas fa-guitar faa-horizontal animated icon" />
               <span>{songs[0].artist.name}</span>
-              <i className="fas fa-guitar faa-horizontal animated icon" />
             </h1>
-            <img src={songs[0].artist.picture_medium} className="item" />
+            <img src={songs[0].artist.picture_big} className="item" />
           </div>
           <div className="song">
             {songs.map(song => (
