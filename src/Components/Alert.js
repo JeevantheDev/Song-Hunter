@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default () => (
   <Fragment>
     <div className="alert" role="alert">
-        Please Type Your Favorite Artist's Name.
+        Please Type Your Favorite Artist's or Track's Name.
     </div>
   </Fragment>
 );

@@ -263,7 +263,8 @@ footer .container p {
         flex-direction: column;
     }
     #home .jumbotron .form-inline input {
-        font-size: 6px;
+        width: 100%;
+        font-size: 10px;
         margin-bottom: 0.5rem;
     }
     .header {
